@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap } from 'lucide-react'
+import { Waves } from 'lucide-react'
 
 interface LogoProps {
   className?: string
@@ -88,7 +88,7 @@ export function Logo({
             variants={animated ? iconVariants : {}}
             className="relative z-10"
           >
-            <Zap className={`${sizeClasses.icon.replace('w-', 'w-').replace('h-', 'h-').split(' ')[0].replace('w-', 'w-').replace('10', '6').replace('8', '5').replace('6', '4').replace('12', '7')} text-white`} />
+            <Waves className={`${sizeClasses.icon.replace('w-', 'w-').replace('h-', 'h-').split(' ')[0].replace('w-', 'w-').replace('10', '6').replace('8', '5').replace('6', '4').replace('12', '7')} text-white`} />
           </motion.div>
         </div>
         
@@ -117,7 +117,7 @@ export function Logo({
           animate={animated ? "animate" : false}
           className={`${sizeClasses.text} font-black text-[#2b2c28] dark:text-[#fffafb] tracking-tight`}
         >
-          Blaze
+          Aquareef
         </motion.span>
       )}
     </div>

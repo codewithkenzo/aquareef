@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Play, Sparkles, Zap, TrendingUp } from 'lucide-react'
+import { Waves, Play, ArrowRight, Sparkles, TrendingUp, Users, Zap as Lightning } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { FloatingElements } from '@/components/animations/floating-elements'
 import { ParticleSystem } from '@/components/animations/particle-system'
@@ -82,7 +82,7 @@ export function HeroSection() {
           repeatType: "reverse",
         }}
       >
-        <Zap className="w-10 h-10" />
+        <Lightning className="w-10 h-10" />
       </motion.div>
 
       <motion.div
@@ -202,6 +202,17 @@ export function HeroSection() {
               <div className="text-3xl font-bold text-gray-900 dark:text-white">300%</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Avg. Engagement Boost</div>
             </div>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ 
+              scale: 1.1,
+              rotate: [0, -5, 5, 0],
+              transition: { duration: 0.3 }
+            }}
+            className="w-16 h-16 bg-gradient-to-br from-[#339989] to-[#7de2d1] rounded-2xl flex items-center justify-center shadow-2xl mb-6 mx-auto"
+          >
+            <Waves className="w-10 h-10 text-white" />
           </motion.div>
         </motion.div>
       </div>

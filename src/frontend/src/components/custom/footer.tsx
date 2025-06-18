@@ -7,7 +7,7 @@ import {
   Github, 
   Mail, 
   Heart,
-  Zap
+  Waves
 } from 'lucide-react'
 
 export function Footer() {
@@ -26,12 +26,17 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-3"
+            >
+              <div className="w-10 h-10 bg-gradient-to-br from-[#339989] to-[#7de2d1] rounded-xl flex items-center justify-center shadow-lg">
+                <Waves className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold">Blaze</span>
-            </div>
+              <span className="text-2xl font-black text-[#2b2c28] dark:text-[#fffafb] tracking-tight">
+                Aquareef
+              </span>
+            </motion.div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               AI-powered social media marketing automation that transforms your digital presence 
               and drives real results across all platforms.

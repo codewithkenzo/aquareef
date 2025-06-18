@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Check, X, Star, Zap, Crown, ArrowRight, Sparkles } from 'lucide-react'
+import { Check, X, Star, Crown, ArrowRight, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { FadeInText, GradientText } from '@/components/animations/text-animations'
 import { SocialIcon, SocialIconSizes } from '@/components/ui/social-icons'
@@ -261,7 +261,7 @@ export function PricingSection() {
                 <div className="text-center mb-8">
                   <div className="flex items-center justify-center mb-4">
                     {plan.id === 'starter' && <Star className="w-8 h-8 text-blue-500" />}
-                    {plan.id === 'professional' && <Zap className="w-8 h-8 text-purple-500" />}
+                    {plan.id === 'professional' && <Crown className="w-8 h-8 text-purple-500" />}
                     {plan.id === 'enterprise' && <Crown className="w-8 h-8 text-yellow-500" />}
                   </div>
                   
