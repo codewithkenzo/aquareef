@@ -78,10 +78,12 @@ export function Navbar() {
             <button className="text-[#2b2c28] dark:text-[#fffafb] hover:text-[#339989] dark:hover:text-[#7de2d1] font-medium transition-colors duration-300">
               Sign In
             </button>
-            <Button className="bg-gradient-to-r from-[#339989] to-[#7de2d1] hover:from-[#2b2c28] hover:to-[#339989] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 group">
-              Start Free Trial
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
+            <a href="/dashboard">
+              <Button className="bg-gradient-to-r from-[#339989] to-[#7de2d1] hover:from-[#2b2c28] hover:to-[#339989] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 group">
+                Dashboard
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -118,9 +120,11 @@ export function Navbar() {
               <button className="block w-full text-left py-3 text-[#2b2c28] dark:text-[#fffafb] hover:text-[#339989] dark:hover:text-[#7de2d1] font-medium transition-colors duration-300">
                 Sign In
               </button>
-              <Button className="w-full bg-gradient-to-r from-[#339989] to-[#7de2d1] hover:from-[#2b2c28] hover:to-[#339989] text-white py-3 rounded-full font-semibold transition-all duration-300">
-                Start Free Trial
-              </Button>
+              <a href="/dashboard">
+                <Button className="w-full bg-gradient-to-r from-[#339989] to-[#7de2d1] hover:from-[#2b2c28] hover:to-[#339989] text-white py-3 rounded-full font-semibold transition-all duration-300">
+                  Dashboard
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>
