@@ -2,16 +2,14 @@
   "name": "blaze",
   "version": "0.1.0",
   "private": true,
-  "description": "Frontend-first AI-powered digital product promotion platform",
+  "description": "AI-powered social media marketing automation platform",
   "keywords": [
-    "digital-marketing",
-    "social-media",
-    "ai-powered",
-    "next.js",
-    "magic-ui",
-    "ayrshare",
-    "mcp",
-    "blaze"
+    "social-media-marketing",
+    "ai-automation",
+    "content-generation",
+    "multi-platform",
+    "analytics",
+    "scheduling"
   ],
   "author": "Blaze Development Team",
   "license": "MIT",
@@ -24,30 +22,18 @@
   "scripts": {
     "dev": "npm run dev --workspace=src/frontend",
     "build": "npm run build --workspaces",
+    "start": "npm run start --workspace=src/frontend",
     "test": "npm run test --workspaces",
     "lint": "npm run lint --workspaces",
     "type-check": "npm run type-check --workspaces",
     "clean": "npm run clean --workspaces && rm -rf node_modules",
-    "setup": "npm install && npm run setup --workspaces",
-    "dev:frontend": "npm run dev --workspace=src/frontend",
-    "dev:server": "npm run dev --workspace=src/server",
-    "dev:cli": "npm run dev --workspace=src/cli",
-    "build:frontend": "npm run build --workspace=src/frontend",
-    "build:server": "npm run build --workspace=src/server",
-    "build:core": "npm run build --workspace=src/core",
-    "build:cli": "npm run build --workspace=src/cli",
-    "test:frontend": "npm run test --workspace=src/frontend",
-    "test:server": "npm run test --workspace=src/server",
-    "test:core": "npm run test --workspace=src/core",
-    "test:cli": "npm run test --workspace=src/cli"
+    "install:all": "npm install && npm install --workspaces"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
     "typescript": "^5.3.0",
     "prettier": "^3.1.0",
-    "eslint": "^8.55.0",
-    "@typescript-eslint/eslint-plugin": "^6.13.0",
-    "@typescript-eslint/parser": "^6.13.0"
+    "eslint": "^8.55.0"
   },
   "engines": {
     "node": ">=18.0.0",
