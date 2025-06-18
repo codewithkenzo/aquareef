@@ -31,7 +31,7 @@ const testimonials = [
       engagement: '+180%',
       timeSaved: '12 hrs/week'
     },
-    gradient: 'from-tiffany_blue to-persian_green-500'
+    gradient: 'from-tiffany_blue to-persian_green'
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const testimonials = [
       engagement: '+320%',
       timeSaved: '20 hrs/week'
     },
-    gradient: 'from-persian_green-500 to-persian_green-700'
+    gradient: 'from-persian_green to-teal-600'
   }
 ]
 
@@ -78,14 +78,11 @@ export function TestimonialsCarouselV2() {
       {/* Glassmorphism Background */}
       <div className="absolute inset-0">
         {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-snow/95 via-tiffany_blue/5 to-persian_green/10 dark:from-night/95 dark:via-jet/80 dark:to-persian_green/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-snow/95 via-brand-secondary-10 to-brand-primary-10 dark:from-night/95 dark:via-jet/80 dark:to-brand-primary-20" />
         
         {/* Glass orbs for depth */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-tiffany_blue/20 to-persian_green/10 rounded-full blur-3xl opacity-60" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-persian_green/15 to-tiffany_blue/20 rounded-full blur-3xl opacity-40" />
-        
-        {/* Noise texture overlay */}
-        <div className="absolute inset-0 opacity-20 mix-blend-soft-light bg-glass-testimonials" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-brand-secondary-20 to-brand-primary-10 rounded-full blur-3xl opacity-60" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-brand-primary-15 to-brand-secondary-20 rounded-full blur-3xl opacity-40" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,13 +132,13 @@ export function TestimonialsCarouselV2() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="relative bg-brand-light-60 backdrop-blur-xl border border-brand-white-20 shadow-2xl shadow-brand-black-10"
+                className="relative bg-brand-light-60 backdrop-blur-xl border border-brand-white-20 shadow-2xl"
                 style={{
-                  boxShadow: '0 8px 32px 0 #0000001a, inset 0 1px 0 0 #ffffff33',
+                  boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.2)',
                 }}
               >
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${currentTestimonial.gradient} opacity-3 rounded-3xl`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${currentTestimonial.gradient} opacity-5 rounded-3xl`} />
                 
                 {/* Content Container */}
                 <div className="relative p-12 lg:p-16">
@@ -149,7 +146,7 @@ export function TestimonialsCarouselV2() {
                     {/* Quote Section */}
                     <div className="lg:col-span-8 space-y-8">
                       {/* Quote Icon */}
-                      <div className="inline-flex p-4 rounded-2xl shadow-lg bg-gradient-to-br from-brand-primary-80 to-brand-secondary-80">
+                      <div className="inline-flex p-4 rounded-2xl shadow-lg bg-gradient-to-br from-persian_green to-tiffany_blue">
                         <Quote className="w-8 h-8 text-white" />
                       </div>
 
@@ -167,7 +164,7 @@ export function TestimonialsCarouselV2() {
 
                       {/* Author */}
                       <div className="flex items-center gap-4">
-                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-br from-brand-primary-80 to-brand-secondary-80">
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-br from-persian_green to-tiffany_blue">
                           <span className="text-xl font-bold text-white">
                             {currentTestimonial.avatar}
                           </span>
@@ -214,65 +211,65 @@ export function TestimonialsCarouselV2() {
             </AnimatePresence>
           </div>
 
-          {/* Improved Navigation Buttons */}
-          <button
-            onClick={prevTestimonial}
-            className="absolute -left-16 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-10 group bg-brand-light-80 backdrop-blur-sm border border-brand-white-30 shadow-lg shadow-brand-black-10"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="w-6 h-6 text-persian_green group-hover:text-tiffany_blue transition-colors" />
-          </button>
-          
-          <button
-            onClick={nextTestimonial}
-            className="absolute -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-10 group bg-brand-light-80 backdrop-blur-sm border border-brand-white-30 shadow-lg shadow-brand-black-10"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="w-6 h-6 text-persian_green group-hover:text-tiffany_blue transition-colors" />
-          </button>
-        </div>
-
-        {/* Dots Navigation */}
-        <div className="flex justify-center mt-12 gap-3">
-          {testimonials.map((_, index) => (
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center gap-4 mt-12">
             <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? 'bg-persian_green dark:bg-tiffany_blue w-12'
-                  : 'bg-jet-300 dark:bg-jet-600 hover:bg-jet-400 dark:hover:bg-jet-500 w-3'
-              }`}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
-          ))}
+              onClick={prevTestimonial}
+              className="p-4 rounded-full bg-white/80 dark:bg-jet/80 backdrop-blur-sm border border-brand-secondary-30 hover:bg-brand-secondary-10 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <ChevronLeft className="w-6 h-6 text-persian_green" />
+            </button>
+
+            {/* Indicators */}
+            <div className="flex gap-3">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex
+                      ? 'bg-persian_green shadow-lg'
+                      : 'bg-brand-primary-30 hover:bg-brand-primary-40'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={nextTestimonial}
+              className="p-4 rounded-full bg-white/80 dark:bg-jet/80 backdrop-blur-sm border border-brand-secondary-30 hover:bg-brand-secondary-10 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <ChevronRight className="w-6 h-6 text-persian_green" />
+            </button>
+          </div>
         </div>
 
-        {/* Bottom Stats with Glassmorphism */}
+        {/* Bottom Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto"
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          <div className="text-center p-8 rounded-2xl shadow-lg bg-brand-light-70 backdrop-blur-lg border border-brand-white-30">
-            <div className="text-4xl font-bold text-night dark:text-snow mb-2">4.9/5</div>
-            <div className="flex justify-center mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-              ))}
-            </div>
-            <div className="text-jet-600 dark:text-jet-400 font-medium">Average Rating</div>
-          </div>
-          <div className="text-center p-8 rounded-2xl shadow-lg bg-brand-light-70 backdrop-blur-lg border border-brand-white-30">
-            <div className="text-4xl font-bold text-night dark:text-snow mb-2">50K+</div>
-            <div className="text-jet-600 dark:text-jet-400 font-medium">Happy Customers</div>
-          </div>
-          <div className="text-center p-8 rounded-2xl shadow-lg bg-brand-light-70 backdrop-blur-lg border border-brand-white-30">
-            <div className="text-4xl font-bold text-night dark:text-snow mb-2">1M+</div>
-            <div className="text-jet-600 dark:text-jet-400 font-medium">Posts Created</div>
-          </div>
+          {[
+            { label: 'Average Engagement Increase', value: '240%', icon: '📈' },
+            { label: 'Time Saved Per Week', value: '15+ hrs', icon: '⏰' },
+            { label: 'Customer Satisfaction', value: '4.9/5', icon: '⭐' }
+          ].map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
+              className="text-center p-8 rounded-2xl bg-white/60 dark:bg-jet/60 backdrop-blur-sm border border-brand-secondary-20 shadow-lg"
+            >
+              <div className="text-4xl mb-4">{stat.icon}</div>
+              <div className="text-3xl font-bold text-persian_green mb-2">{stat.value}</div>
+              <div className="text-jet-600 dark:text-jet-400 font-medium">{stat.label}</div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

@@ -215,40 +215,26 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         variants={sidebarVariants}
         animate={isOpen ? "open" : "closed"}
         className={`
-          fixed left-0 top-0 h-full bg-[#fffafb] dark:bg-[#131515] border-r border-[#7de2d1]/20 z-50
-          shadow-xl lg:shadow-none lg:relative lg:z-auto
-          ${isOpen ? 'lg:w-70' : 'lg:w-20'}
+          fixed left-0 top-0 h-full bg-snow dark:bg-night border-r border-brand-secondary-20 z-50
+          transition-transform duration-300 ease-in-out lg:hidden
+          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+          w-72
         `}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-[#7de2d1]/20">
-            <AnimatePresence>
-              {isOpen ? (
-                <motion.div
-                  variants={contentVariants}
-                  initial="closed"
-                  animate="open"
-                  exit="closed"
-                >
-                  <Logo size="lg" animated={true} />
-                </motion.div>
-              ) : (
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <Logo size="md" showText={false} animated={true} />
-                </motion.div>
-              )}
-            </AnimatePresence>
-            
+          <div className="flex items-center justify-between p-6 border-b border-brand-secondary-20">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-persian_green to-tiffany_blue flex items-center justify-center">
+                <span className="text-white font-bold text-sm">A</span>
+              </div>
+              <span className="text-xl font-bold text-night dark:text-snow">Aquareef</span>
+            </div>
             <button
-              onClick={onToggle}
-              className="p-2 rounded-lg text-[#339989] hover:bg-[#7de2d1]/10 dark:hover:bg-[#339989]/20 transition-colors duration-300 lg:hidden"
+              onClick={() => setActiveItem('')}
+              className="p-2 rounded-lg text-persian_green hover:bg-brand-secondary-10 dark:hover:bg-brand-primary-20 transition-colors duration-300 lg:hidden"
             >
-              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              <X className="w-5 h-5" />
             </button>
           </div>
 
@@ -260,7 +246,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
           </div>
 
           {/* Bottom Section */}
-          <div className="px-4 py-6 border-t border-[#7de2d1]/20 space-y-2">
+          <div className="px-4 py-6 border-t border-brand-secondary-20 space-y-2">
             {bottomItems.map((item) => (
               <NavItem key={item.name} item={item} />
             ))}
