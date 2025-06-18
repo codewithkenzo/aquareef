@@ -122,7 +122,7 @@ export function HeroSection() {
         </motion.div>
 
         {/* Headline */}
-        <div className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white leading-tight max-w-5xl mx-auto tracking-tight">
+        <div className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black font-monopoly text-night dark:text-snow leading-tight max-w-5xl mx-auto tracking-tight">
           <FadeInText delay={0.4}>
             <span className="block bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent">
               Automate Your
@@ -130,7 +130,7 @@ export function HeroSection() {
           </FadeInText>
           <div className="block overflow-hidden">
             <GradientText 
-              className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black block tracking-tight"
+              className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black font-monopoly block tracking-tight"
               gradientClass="from-persian_green via-tiffany_blue to-persian_green"
             >
               <TypewriterText text="Social Empire" delay={0.8} speed={0.1} />
@@ -146,7 +146,7 @@ export function HeroSection() {
         {/* Subtitle */}
         <FadeInText 
           delay={2.0}
-          className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium mt-8 mb-12"
+          className="text-xl sm:text-2xl font-monopoly text-jet-600 dark:text-jet-300 max-w-3xl mx-auto leading-relaxed font-medium mt-8 mb-12"
         >
           Build a thriving social media empire across 8+ platforms. AI creates your content, 
           schedules strategically, and optimizes for maximum engagement—all while you sleep.
@@ -166,7 +166,7 @@ export function HeroSection() {
               boxShadow: "0 20px 40px #33998966, 0 10px 20px #7de2d14d, inset 0 1px 0 #ffffff33"
             }}
             whileTap={{ scale: 0.98 }}
-            className="group relative text-white px-10 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 min-w-[200px] h-14 overflow-hidden bg-brand-complex"
+            className="group relative text-white px-10 py-4 text-lg font-semibold font-monopoly rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 min-w-[200px] h-14 overflow-hidden bg-brand-complex"
             style={{
               boxShadow: '0 8px 25px rgb(var(--tw-color-brand-primary-30)), 0 4px 12px rgb(var(--tw-color-brand-secondary-20)), inset 0 1px 0 rgb(var(--tw-color-brand-white-10))',
             }}
@@ -187,7 +187,7 @@ export function HeroSection() {
               borderColor: "#7de2d166"
             }}
             whileTap={{ scale: 0.98 }}
-            className="group flex items-center gap-3 px-10 py-4 text-lg font-semibold rounded-full border-2 border-gray-200/30 dark:border-gray-700/30 text-gray-700 dark:text-gray-300 hover:text-persian_green dark:hover:text-tiffany_blue backdrop-blur-sm transition-all duration-300 min-w-[200px] h-14 bg-brand-white-08"
+            className="group flex items-center gap-3 px-10 py-4 text-lg font-semibold font-monopoly rounded-full border-2 border-brand-white-20 dark:border-brand-primary-20 text-jet-700 dark:text-jet-300 hover:text-persian_green dark:hover:text-tiffany_blue backdrop-blur-sm transition-all duration-300 min-w-[200px] h-14 bg-brand-white-08"
           >
             <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             Watch Demo
@@ -216,8 +216,8 @@ export function HeroSection() {
               ))}
             </div>
             <div className="text-left">
-              <div className="text-2xl font-bold text-gray-900 dark:text-white">50K+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Active Users</div>
+              <div className="text-2xl font-bold font-monopoly text-night dark:text-snow">50K+</div>
+              <div className="text-sm font-mono text-jet-600 dark:text-jet-400">Active Users</div>
             </div>
           </div>
           
@@ -226,8 +226,8 @@ export function HeroSection() {
               <TrendingUp className="w-6 h-6 text-white" />
             </div>
             <div className="text-left">
-              <div className="text-2xl font-bold text-gray-900 dark:text-white">300%</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Avg Growth</div>
+              <div className="text-2xl font-bold font-monopoly text-night dark:text-snow">300%</div>
+              <div className="text-sm font-mono text-jet-600 dark:text-jet-400">Avg Growth</div>
             </div>
           </div>
         </motion.div>

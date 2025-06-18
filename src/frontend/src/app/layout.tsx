@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Monopoly-style font (using Inter as fallback since Monopoly isn't available on Google Fonts)
+// For a true Monopoly font, you'd need to import a custom font file
+const monopolyFont = Inter({
+  variable: "--font-monopoly",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+// Monospace font for smaller text elements
+const monoFont = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -36,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased font-inter`}
+        className={`${monopolyFont.variable} ${monoFont.variable} antialiased font-monopoly`}
       >
         {children}
       </body>

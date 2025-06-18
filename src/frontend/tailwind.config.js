@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        monopoly: ['var(--font-monopoly)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'Consolas', 'Monaco', 'Courier New', 'monospace'],
+        sans: ['var(--font-monopoly)', 'system-ui', 'sans-serif'],
       },
       colors: {
         // shadcn/ui colors (keep for compatibility)
