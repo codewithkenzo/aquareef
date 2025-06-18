@@ -1,8 +1,8 @@
 {
-  "name": "blaze",
+  "name": "aquareef",
   "version": "0.1.0",
   "private": true,
-  "description": "AI-powered social media marketing automation platform",
+  "description": "🌊 Aquareef - AI-powered social media automation platform with ocean-deep reach",
   "keywords": [
     "social-media-marketing",
     "ai-automation",
@@ -11,14 +11,9 @@
     "analytics",
     "scheduling"
   ],
-  "author": "Blaze Development Team",
+  "author": "Aquareef Development Team",
   "license": "MIT",
-  "workspaces": [
-    "src/frontend",
-    "src/core",
-    "src/cli",
-    "src/server"
-  ],
+
   "scripts": {
     "dev": "npm run dev --workspace=src/frontend",
     "build": "npm run build --workspaces",
@@ -41,10 +36,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codewithkenzo/blaze.git"
+    "url": "https://github.com/codewithkenzo/aquareef.git"
   },
   "bugs": {
-    "url": "https://github.com/codewithkenzo/blaze/issues"
+    "url": "https://github.com/codewithkenzo/aquareef/issues"
   },
-  "homepage": "https://github.com/codewithkenzo/blaze#readme"
+  "homepage": "https://github.com/codewithkenzo/aquareef#readme"
 } 

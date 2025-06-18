@@ -2,24 +2,23 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Clock, Video, Users, CheckCircle, ArrowRight, Play, Sparkles } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Calendar, Video, Users, CheckCircle, ArrowRight } from 'lucide-react'
 
 const demoFeatures = [
   {
     icon: Video,
     title: 'Live Platform Demo',
-    description: 'See Blaze in action with a personalized walkthrough of all features'
+    description: 'See Aquareef in action with a personalized walkthrough of all features and AI capabilities'
   },
   {
     icon: Users,
     title: 'Strategy Consultation',
-    description: 'Get expert advice on optimizing your social media strategy'
+    description: 'Get expert advice on optimizing your social media strategy with ocean-deep insights'
   },
   {
     icon: CheckCircle,
     title: 'Custom Setup',
-    description: 'Learn how to configure Blaze for your specific business needs'
+    description: 'Learn how to configure Aquareef for your specific business needs and goals'
   }
 ]
 
@@ -28,13 +27,13 @@ const timeSlots = [
 ]
 
 export function DemoSection() {
-  const [selectedDate, setSelectedDate] = useState<string>('')
-  const [selectedTime, setSelectedTime] = useState<string>('')
+  const [selectedDate] = useState<string>('')
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [name, setName] = useState<string>('')
 
   const handleScheduleDemo = () => {
-    if (!selectedDate || !selectedTime || !email || !name) {
+    if (!selectedDate || !selectedTimeSlot || !email || !name) {
       alert('Please fill in all fields to schedule your demo.')
       return
     }
@@ -43,7 +42,7 @@ export function DemoSection() {
     const subject = `Demo Request - ${name}`
     const body = `Hi,
 
-I'd like to schedule a demo of Blaze for ${selectedDate} at ${selectedTime}.
+I'd like to schedule a demo of Aquareef for ${selectedDate} at ${selectedTimeSlot}.
 
 Name: ${name}
 Email: ${email}
@@ -53,40 +52,40 @@ Looking forward to seeing the platform in action!
 Best regards,
 ${name}`
 
-    window.open(`mailto:demo@blaze.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank')
+    window.open(`mailto:demo@aquareef.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank')
   }
 
   return (
-    <section id="demo-section" className="py-24 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 relative overflow-hidden">
+    <section id="demo-section" className="py-24 bg-gradient-to-br from-[#fffafb] via-white to-teal-50 dark:from-[#131515] dark:via-[#2b2c28] dark:to-teal-900/20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-20 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute -top-8 -left-4 w-72 h-72 bg-[#7de2d1] rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
-            x: [0, 50, 0],
+            x: [0, 100, 0],
             y: [0, -50, 0],
           }}
           transition={{
-            duration: 15,
+            duration: 20,
             repeat: Infinity,
-            repeatType: "reverse",
+            ease: "easeInOut"
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-20 w-64 h-64 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute bottom-20 right-20 w-64 h-64 bg-[#339989] rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
-            x: [0, -50, 0],
+            x: [0, -100, 0],
             y: [0, 50, 0],
           }}
           transition={{
-            duration: 18,
+            duration: 25,
             repeat: Infinity,
-            repeatType: "reverse",
+            ease: "easeInOut"
           }}
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,178 +99,160 @@ ${name}`
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-base font-medium mb-6"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#7de2d1]/20 to-[#339989]/20 dark:from-[#7de2d1]/10 dark:to-[#339989]/10 text-[#339989] dark:text-[#7de2d1] rounded-full text-base font-medium mb-6 border border-[#7de2d1]/30"
           >
-            <Play className="w-6 h-6" />
-            Live Demo
+            <Calendar className="w-5 h-5" />
+            Schedule Your Demo
           </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            See Blaze in
-            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#131515] dark:text-[#fffafb] mb-6 leading-tight">
+            See Aquareef in
+            <span className="block bg-gradient-to-r from-[#339989] via-[#7de2d1] to-teal-600 bg-clip-text text-transparent">
               Action
             </span>
           </h2>
           
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Book a personalized demo and discover how Blaze can transform your social media strategy. 
-            Our experts will show you exactly how to maximize your ROI.
+          <p className="text-xl text-[#2b2c28] dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Book a personalized demo and discover how Aquareef can transform your social media strategy. 
+            See real results, get expert insights, and start your journey to social media success.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Demo Features */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Benefits */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
             className="space-y-8"
           >
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                What You'll Learn
-              </h3>
-              
-              <div className="space-y-6">
-                {demoFeatures.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.6 }}
-                    className="flex items-start gap-4 p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/20 dark:border-gray-700/20"
-                  >
-                    <div className="flex-shrink-0 p-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg">
-                      <feature.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            {demoFeatures.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+                className="flex items-start gap-4"
+              >
+                <div className="flex-shrink-0 p-2 bg-gradient-to-br from-[#339989] to-[#7de2d1] rounded-lg">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-[#131515] dark:text-[#fffafb] mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-[#2b2c28] dark:text-gray-300 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
 
-            {/* Stats */}
+            {/* Demo Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="grid grid-cols-2 gap-4"
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="bg-white/80 dark:bg-[#2b2c28]/80 backdrop-blur-sm rounded-2xl p-6 border border-[#7de2d1]/20"
             >
-              <div className="text-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/20 dark:border-gray-700/20">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">15 min</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Demo Duration</div>
-              </div>
-              <div className="text-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm border border-white/20 dark:border-gray-700/20">
-                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">1-on-1</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Personalized</div>
-              </div>
+              <div className="text-2xl font-bold text-[#339989] dark:text-[#7de2d1]">1-on-1</div>
+              <div className="text-[#2b2c28] dark:text-gray-300">Personalized Demo</div>
+              <div className="text-sm text-gray-500 mt-1">30 minutes • No commitment required</div>
             </motion.div>
           </motion.div>
 
-          {/* Booking Form */}
+          {/* Right Side - Booking Form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700"
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="bg-white/90 dark:bg-[#2b2c28]/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-[#7de2d1]/20"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Calendar className="w-6 h-6 text-blue-500" />
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                Schedule Your Demo
-              </h3>
+              <Calendar className="w-6 h-6 text-[#339989]" />
+              <h3 className="text-2xl font-bold text-[#131515] dark:text-[#fffafb]">Book Your Demo</h3>
             </div>
 
-            <div className="space-y-6">
-              {/* Name Input */}
+            <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-[#2b2c28] dark:text-gray-300 mb-2">
                   Full Name
                 </label>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="Enter your full name"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#339989] focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
-              {/* Email Input */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email Address
+                <label className="block text-sm font-medium text-[#2b2c28] dark:text-gray-300 mb-2">
+                  Work Email
                 </label>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  placeholder="Enter your email address"
+                  placeholder="your.email@company.com"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#339989] focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
-              {/* Date Selection */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Preferred Date
+                <label className="block text-sm font-medium text-[#2b2c28] dark:text-gray-300 mb-2">
+                  Company Name
                 </label>
                 <input
-                  type="date"
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  type="text"
+                  placeholder="Your company name"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#339989] focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
-              {/* Time Selection */}
+              {/* Time Slot Selection */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Preferred Time
+                <label className="block text-sm font-medium text-[#2b2c28] dark:text-gray-300 mb-3">
+                  Preferred Time Slot
                 </label>
-                <div className="grid grid-cols-3 gap-2">
-                  {timeSlots.map((time) => (
+                <div className="grid grid-cols-2 gap-3">
+                  {timeSlots.map((slot) => (
                     <button
-                      key={time}
-                      onClick={() => setSelectedTime(time)}
-                      className={`px-3 py-2 text-sm rounded-lg border transition-all duration-200 ${
-                        selectedTime === time
-                          ? 'bg-blue-500 text-white border-blue-500'
-                          : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-500'
+                      key={slot}
+                      type="button"
+                      onClick={() => setSelectedTimeSlot(slot)}
+                      className={`px-4 py-3 rounded-lg border text-sm font-medium transition-all duration-300 ${
+                        selectedTimeSlot === slot
+                          ? 'bg-[#339989] text-white border-[#339989]'
+                          : 'bg-white dark:bg-gray-700 text-[#2b2c28] dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-[#339989]'
                       }`}
                     >
-                      {time}
+                      {slot}
                     </button>
                   ))}
                 </div>
               </div>
 
-              {/* Schedule Button */}
-              <Button
+              <motion.button
+                type="button"
                 onClick={handleScheduleDemo}
-                className="w-full py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-[#339989] to-[#7de2d1] hover:from-[#2d8a7a] hover:to-[#6dd9c6] text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                <Calendar className="mr-2 w-5 h-5" />
-                Schedule Demo
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+                Schedule My Demo
+                <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </motion.button>
+            </form>
 
-              <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                We'll send you a calendar invite with the meeting link
-              </p>
-            </div>
+            <p className="text-sm text-gray-500 text-center mt-4">
+              No spam, no commitment. Just a friendly conversation about your social media goals.
+            </p>
           </motion.div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { Sparkles, Zap, TrendingUp, Share2, Brain, Target } from 'lucide-react'
 const floatingElements = [
   {
     icon: Sparkles,
-    color: 'text-blue-500',
+    color: 'text-[#339989]',
     size: 'w-8 h-8',
     position: { top: '10%', left: '10%' },
     animation: {
@@ -18,7 +18,7 @@ const floatingElements = [
   },
   {
     icon: Zap,
-    color: 'text-purple-500',
+    color: 'text-[#7de2d1]',
     size: 'w-6 h-6',
     position: { top: '20%', right: '15%' },
     animation: {
@@ -42,7 +42,7 @@ const floatingElements = [
   },
   {
     icon: Share2,
-    color: 'text-pink-500',
+    color: 'text-teal-500',
     size: 'w-7 h-7',
     position: { top: '60%', right: '10%' },
     animation: {

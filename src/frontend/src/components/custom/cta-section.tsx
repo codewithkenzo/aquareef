@@ -240,9 +240,9 @@ export function CTASection() {
                 ))}
               </div>
               <blockquote className="text-white/90 mb-4 leading-relaxed">
-                "Blaze transformed our entire social media strategy. We went from 
+                &quot;Blaze transformed our entire social media strategy. We went from 
                 spending 30 hours a week to just 5 hours, while our engagement 
-                increased by 400%. It's simply incredible."
+                increased by 400%. It&apos;s simply incredible.&quot;
               </blockquote>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">

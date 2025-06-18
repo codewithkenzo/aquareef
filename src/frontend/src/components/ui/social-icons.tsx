@@ -80,7 +80,7 @@ export const SocialIconSizes = {
 
 // Platform color classes (optional, for colored icons)
 export const SocialIconColors = {
-  instagram: 'text-pink-500',
+  instagram: 'text-[#7de2d1]',
   facebook: 'text-blue-600',
   twitter: 'text-blue-400',
   linkedin: 'text-blue-700',

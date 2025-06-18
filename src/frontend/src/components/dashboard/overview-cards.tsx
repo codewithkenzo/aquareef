@@ -50,7 +50,7 @@ const MetricCard = ({ title, value, change, trend, icon: Icon, color, index }: M
       initial="hidden"
       animate="visible"
       whileHover={{ y: -4, scale: 1.02 }}
-      className="bg-[#fffafb] dark:bg-[#2b2c28] rounded-2xl p-6 shadow-lg border border-[#7de2d1]/20 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group"
+      className="bg-snow dark:bg-jet rounded-2xl p-6 shadow-lg border border-tiffany_blue/20 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group"
     >
       {/* Background Gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -70,7 +70,7 @@ const MetricCard = ({ title, value, change, trend, icon: Icon, color, index }: M
           
           <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
             trend === 'up' 
-              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' 
+              ? 'bg-persian_green/10 dark:bg-persian_green/20 text-persian_green dark:text-tiffany_blue' 
               : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
           }`}>
             {trend === 'up' ? (
@@ -88,7 +88,7 @@ const MetricCard = ({ title, value, change, trend, icon: Icon, color, index }: M
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.1 + 0.2, duration: 0.4 }}
-            className="text-3xl font-bold text-[#2b2c28] dark:text-[#fffafb]"
+            className="text-3xl font-bold text-night dark:text-snow"
           >
             {value}
           </motion.h3>
@@ -96,7 +96,7 @@ const MetricCard = ({ title, value, change, trend, icon: Icon, color, index }: M
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }}
-            className="text-[#2b2c28]/70 dark:text-[#fffafb]/70 font-medium"
+            className="text-jet-700 dark:text-jet-300 font-medium"
           >
             {title}
           </motion.p>
@@ -117,7 +117,7 @@ export function OverviewCards() {
       change: '+12.5%',
       trend: 'up' as const,
       icon: TrendingUp,
-      color: 'from-[#339989] to-[#7de2d1]'
+      color: 'from-persian_green to-tiffany_blue'
     },
     {
       title: 'Active Campaigns',
@@ -125,7 +125,7 @@ export function OverviewCards() {
       change: '+3',
       trend: 'up' as const,
       icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-tiffany_blue to-persian_green'
     },
     {
       title: 'Audience Growth',
@@ -133,7 +133,7 @@ export function OverviewCards() {
       change: '+8.1%',
       trend: 'up' as const,
       icon: Users,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-persian_green to-jet'
     },
     {
       title: 'Posts Scheduled',
@@ -141,7 +141,7 @@ export function OverviewCards() {
       change: '+23',
       trend: 'up' as const,
       icon: Calendar,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-jet to-persian_green'
     }
   ]
 

@@ -22,7 +22,7 @@ interface ParticleSystemProps {
 export function ParticleSystem({ 
   count = 20, 
   className = '',
-  colors = ['bg-blue-500', 'bg-purple-500', 'bg-pink-500', 'bg-cyan-500', 'bg-green-500']
+  colors = ['bg-[#339989]', 'bg-[#7de2d1]', 'bg-teal-500', 'bg-cyan-500', 'bg-teal-600']
 }: ParticleSystemProps) {
   const [particles, setParticles] = useState<Particle[]>([])
 

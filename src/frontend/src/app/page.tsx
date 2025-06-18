@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/custom/navbar'
 import { HeroSection } from '@/components/custom/hero-section'
 import { FeatureShowcase } from '@/components/custom/feature-showcase'
-import { TestimonialsCarouselV2 } from '@/components/custom/testimonials-carousel-v2'
+import { TestimonialsCarouselV2 as TestimonialsCarousel } from '@/components/custom/testimonials-carousel-v2'
 import { PricingSection } from '@/components/custom/pricing-section'
 import { DemoSection } from '@/components/custom/demo-section'
 import { CTASection } from '@/components/custom/cta-section'
@@ -16,7 +16,7 @@ export default function Home() {
         <FeatureShowcase />
       </section>
       <section id="testimonials">
-        <TestimonialsCarouselV2 />
+        <TestimonialsCarousel />
       </section>
       <section id="pricing">
         <PricingSection />

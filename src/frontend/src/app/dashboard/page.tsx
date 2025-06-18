@@ -29,7 +29,7 @@ export default function DashboardPage() {
       status: 'Scheduled',
       engagement: '8.2K',
       platforms: ['Facebook', 'Instagram'],
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-[#7de2d1] to-teal-500'
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ export default function DashboardPage() {
       status: 'Draft',
       engagement: '0',
       platforms: ['Twitter', 'TikTok'],
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-[#339989] to-[#7de2d1]'
     }
   ]
 
@@ -223,13 +223,13 @@ export default function DashboardPage() {
             title: 'View Analytics',
             description: 'Check performance metrics',
             icon: TrendingUp,
-            color: 'from-blue-500 to-cyan-500'
+            color: 'from-[#7de2d1] to-teal-500'
           },
           {
             title: 'Manage Audience',
             description: 'Grow and engage your audience',
             icon: Users,
-            color: 'from-purple-500 to-pink-500'
+            color: 'from-[#339989] to-[#7de2d1]'
           }
         ].map((action, index) => (
           <motion.button

@@ -73,7 +73,7 @@ interface GradientTextProps {
 export function GradientText({ 
   children, 
   className = '', 
-  gradientClass = 'from-blue-600 via-purple-600 to-pink-600' 
+  gradientClass = 'from-[#339989] via-[#7de2d1] to-teal-600' 
 }: GradientTextProps) {
   return (
     <motion.div

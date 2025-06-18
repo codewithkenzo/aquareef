@@ -124,7 +124,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
     }
   }
 
-  const NavItem = ({ item, isBottom = false }: { item: typeof navigationItems[0], isBottom?: boolean }) => {
+  const NavItem = ({ item }: { item: typeof navigationItems[0] }) => {
     const isActive = activeItem === item.name
     
     return (
@@ -139,29 +139,25 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
           className={`
             relative flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group
             ${isActive 
-              ? 'bg-gradient-to-r from-[#339989] to-[#7de2d1] text-white shadow-lg' 
-              : 'text-[#2b2c28] dark:text-[#fffafb] hover:bg-[#7de2d1]/10 dark:hover:bg-[#339989]/20'
+              ? 'bg-persian_green/10 dark:bg-persian_green/15 text-persian_green border border-persian_green/20' 
+              : 'text-jet-700 dark:text-snow hover:bg-persian_green/5 dark:hover:bg-persian_green/10'
             }
           `}
         >
-          {/* Active indicator */}
+          {/* Active indicator - cleaner design */}
           {isActive && (
             <motion.div
               layoutId="activeIndicator"
-              className="absolute left-0 top-0 bottom-0 w-1 bg-white rounded-r-full"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-1.5 h-6 bg-persian_green rounded-full"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
             />
           )}
           
           {/* Icon */}
-          <motion.div
-            animate={isActive ? { scale: 1.1 } : { scale: 1 }}
-            transition={{ duration: 0.2 }}
-            className="relative"
-          >
-            <item.icon className={`w-5 h-5 ${isActive ? 'text-white' : 'text-[#339989]'}`} />
+          <div className="relative ml-2">
+            <item.icon className={`w-5 h-5 transition-colors duration-200 ${isActive ? 'text-persian_green' : 'text-persian_green/70'}`} />
             
             {/* Badge */}
             {item.badge && (
@@ -173,7 +169,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                 {item.badge}
               </motion.div>
             )}
-          </motion.div>
+          </div>
           
           {/* Text */}
           <AnimatePresence>
@@ -183,7 +179,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                className={`font-medium ${isActive ? 'text-white' : 'text-[#2b2c28] dark:text-[#fffafb]'}`}
+                className={`font-medium ${isActive ? 'text-persian_green' : 'text-jet-700 dark:text-snow'}`}
               >
                 {item.name}
               </motion.span>
@@ -192,7 +188,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
           
           {/* Hover glow effect */}
           {!isActive && (
-            <div className="absolute inset-0 bg-gradient-to-r from-[#339989]/5 to-[#7de2d1]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-persian_green/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           )}
         </Link>
       </motion.div>
@@ -266,7 +262,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
           {/* Bottom Section */}
           <div className="px-4 py-6 border-t border-[#7de2d1]/20 space-y-2">
             {bottomItems.map((item) => (
-              <NavItem key={item.name} item={item} isBottom={true} />
+              <NavItem key={item.name} item={item} />
             ))}
             
             {/* Logout */}

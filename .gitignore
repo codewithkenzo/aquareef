@@ -38,6 +38,12 @@ Thumbs.db
 AGENT_STATUS.md
 plan.md
 todo.md
+project-status.md
+PLACEHOLDER_AUDIT.md
+README_old.md
+dev-docs/
+docs/
+config/
 
 # Cloned repositories (development dependencies)
 social-media-api/

@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
-import { FadeInText } from '@/components/animations/text-animations'
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const testimonials = [
   {
@@ -184,7 +183,7 @@ export function TestimonialsCarousel() {
 
                     {/* Quote */}
                     <blockquote className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-                      "{testimonials[currentIndex].quote}"
+                      &quot;{testimonials[currentIndex].quote}&quot;
                     </blockquote>
 
                     {/* Author Info */}
