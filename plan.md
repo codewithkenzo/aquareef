@@ -1,4 +1,4 @@
-# Digital Product Promotion Platform - Technical Plan
+# Blaze - Technical Plan
 
 ## Overview
 A comprehensive **frontend-first** platform for AI-powered digital product promotion across social media platforms. We build a beautiful, modern web interface using Magic UI components first, then integrate with Ayrshare API and MCP (Model Context Protocol) for AI agent compatibility.

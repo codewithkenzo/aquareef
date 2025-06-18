@@ -1,4 +1,4 @@
-# Agent Status Tracking - Digital Product Promotion Platform
+# Agent Status Tracking - Blaze Platform
 
 ## Current Phase: **Phase 0 - Frontend Development** (Week 1-3)
 

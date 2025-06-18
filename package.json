@@ -1,5 +1,5 @@
 {
-  "name": "gumroad-digital",
+  "name": "blaze",
   "version": "0.1.0",
   "private": true,
   "description": "Frontend-first AI-powered digital product promotion platform",
@@ -10,9 +10,10 @@
     "next.js",
     "magic-ui",
     "ayrshare",
-    "mcp"
+    "mcp",
+    "blaze"
   ],
-  "author": "Digital Product Promotion Team",
+  "author": "Blaze Development Team",
   "license": "MIT",
   "workspaces": [
     "src/frontend",
@@ -54,10 +55,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/gumroad-digital.git"
+    "url": "https://github.com/codewithkenzo/blaze.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/gumroad-digital/issues"
+    "url": "https://github.com/codewithkenzo/blaze/issues"
   },
-  "homepage": "https://github.com/your-username/gumroad-digital#readme"
+  "homepage": "https://github.com/codewithkenzo/blaze#readme"
 } 

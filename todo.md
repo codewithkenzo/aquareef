@@ -1,4 +1,4 @@
-# Digital Product Promotion Platform - Development Todo
+# Blaze - Development Todo
 
 ## Phase 0: Frontend Development (Week 1-3)
 **Goal**: Build a complete, beautiful frontend with Magic UI animations and mock data
