@@ -131,19 +131,12 @@ export function PricingSection() {
   }
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Glassmorphism Background System */}
-      <div className="absolute inset-0">
-        {/* Base gradient layer */}
-        <div className="absolute inset-0 bg-gradient-to-br from-snow/96 via-tiffany_blue/8 to-persian_green/12 dark:from-night/96 dark:via-jet/85 dark:to-persian_green/18" />
-        
-        {/* Floating glass orbs for depth */}
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-tiffany_blue/15 to-persian_green/8 rounded-full blur-3xl opacity-50" />
-        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-br from-persian_green/12 to-tiffany_blue/15 rounded-full blur-3xl opacity-40" />
-        <div className="absolute top-0 right-1/3 w-64 h-64 bg-gradient-to-br from-jet/10 to-persian_green/6 rounded-full blur-2xl opacity-35" />
-        
-        {/* Subtle texture overlay */}
-        <div className="absolute inset-0 opacity-20 mix-blend-soft-light bg-glass-pricing" />
+    <section className="py-24 relative">
+      {/* Minimal depth enhancement - no background override */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Very subtle orbs for depth */}
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-tiffany_blue/5 to-persian_green/3 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-br from-persian_green/4 to-tiffany_blue/5 rounded-full blur-3xl opacity-20" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

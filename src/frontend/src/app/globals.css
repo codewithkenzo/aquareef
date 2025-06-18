@@ -62,27 +62,31 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    /* Natural, clean background instead of stark white */
+    @apply text-foreground font-monopoly;
+    /* Unified brand background across entire application */
     background: linear-gradient(135deg, 
-      rgb(248, 250, 252) 0%,     /* slate-50 */
-      rgb(241, 245, 249) 25%,    /* slate-100 */
-      rgb(248, 250, 252) 50%,    /* slate-50 */
-      rgb(241, 245, 249) 75%,    /* slate-100 */
-      rgb(248, 250, 252) 100%    /* slate-50 */
+      #fffafb 0%,                /* snow - brand light */
+      rgba(125, 226, 209, 0.03) 15%,  /* tiffany_blue/3% */
+      #fffafb 30%,               /* snow */
+      rgba(51, 153, 137, 0.05) 50%,   /* persian_green/5% */
+      #fffafb 70%,               /* snow */
+      rgba(125, 226, 209, 0.02) 85%,  /* tiffany_blue/2% */
+      #fffafb 100%               /* snow */
     );
     background-attachment: fixed;
     min-height: 100vh;
   }
   
   .dark body {
-    /* Natural dark background */
+    /* Unified brand dark background */
     background: linear-gradient(135deg,
-      rgb(15, 23, 42) 0%,        /* slate-900 */
-      rgb(30, 41, 59) 25%,       /* slate-800 */
-      rgb(15, 23, 42) 50%,       /* slate-900 */
-      rgb(30, 41, 59) 75%,       /* slate-800 */
-      rgb(15, 23, 42) 100%       /* slate-900 */
+      #131515 0%,                /* night - brand dark */
+      rgba(51, 153, 137, 0.08) 15%,   /* persian_green/8% */
+      #2b2c28 30%,               /* jet */
+      rgba(125, 226, 209, 0.05) 50%,  /* tiffany_blue/5% */
+      #131515 70%,               /* night */
+      rgba(51, 153, 137, 0.06) 85%,   /* persian_green/6% */
+      #131515 100%               /* night */
     );
     background-attachment: fixed;
   }

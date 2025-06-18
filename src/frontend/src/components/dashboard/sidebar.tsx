@@ -13,11 +13,9 @@ import {
   Bell,
   HelpCircle,
   LogOut,
-  Menu,
   X
 } from 'lucide-react'
 import Link from 'next/link'
-import { Logo } from '@/components/ui/logo'
 
 interface SidebarProps {
   isOpen: boolean
@@ -140,7 +138,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
             relative flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group
             ${isActive 
               ? 'bg-persian_green/10 dark:bg-persian_green/15 text-persian_green border border-persian_green/20' 
-              : 'text-jet-700 dark:text-snow hover:bg-persian_green/5 dark:hover:bg-persian_green/10'
+              : 'text-night dark:text-snow hover:bg-persian_green/5 dark:hover:bg-persian_green/10'
             }
           `}
         >
@@ -179,7 +177,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                className={`font-medium ${isActive ? 'text-persian_green' : 'text-jet-700 dark:text-snow'}`}
+                className={`font-medium font-monopoly ${isActive ? 'text-persian_green' : 'text-night dark:text-snow'}`}
               >
                 {item.name}
               </motion.span>
@@ -215,10 +213,9 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         variants={sidebarVariants}
         animate={isOpen ? "open" : "closed"}
         className={`
-          fixed left-0 top-0 h-full bg-snow dark:bg-night border-r border-brand-secondary-20 z-50
-          transition-transform duration-300 ease-in-out lg:hidden
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-          w-72
+          fixed left-0 top-0 h-full bg-snow/95 dark:bg-night/95 backdrop-blur-xl border-r border-persian_green/20 z-50
+          lg:relative lg:translate-x-0 lg:z-10
+          ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
       >
         <div className="flex flex-col h-full">
@@ -228,7 +225,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-persian_green to-tiffany_blue flex items-center justify-center">
                 <span className="text-white font-bold text-sm">A</span>
               </div>
-              <span className="text-xl font-bold text-night dark:text-snow">Aquareef</span>
+              <span className="text-xl font-bold font-monopoly text-night dark:text-snow">Aquareef</span>
             </div>
             <button
               onClick={() => setActiveItem('')}
@@ -265,7 +262,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                     initial="closed"
                     animate="open"
                     exit="closed"
-                    className="font-medium"
+                    className="font-medium font-monopoly"
                   >
                     Sign Out
                   </motion.span>

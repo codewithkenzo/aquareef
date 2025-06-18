@@ -7,74 +7,43 @@ import { FadeInText, GradientText, TypewriterText } from '@/components/animation
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Natural Background System */}
-      <div className="absolute inset-0">
-        {/* Base clean gradient - more natural colors */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-blue-50/30 to-cyan-50/40 dark:from-slate-900/95 dark:via-slate-800/90 dark:to-slate-700/80" />
+      {/* Minimal enhancement - no background override */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Very subtle organic shapes */}
+        <motion.div
+          className="absolute -top-32 -left-32 w-96 h-96 rounded-full opacity-8 bg-gradient-to-r from-tiffany_blue/15 via-tiffany_blue/5 to-transparent"
+          style={{
+            filter: 'blur(40px)',
+          }}
+          animate={{
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
+        />
         
-        {/* Subtle organic shapes instead of focus squares */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Large organic blob - top left */}
-          <motion.div
-            className="absolute -top-32 -left-32 w-96 h-96 rounded-full opacity-20 bg-gradient-to-r from-brand-secondary-30 via-brand-secondary-10 to-transparent"
-            style={{
-              filter: 'blur(40px)',
-            }}
-            animate={{
-              x: [0, 30, 0],
-              y: [0, -20, 0],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-          />
-          
-          {/* Medium organic blob - bottom right */}
-          <motion.div
-            className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full opacity-25 bg-gradient-to-r from-brand-primary-30 via-brand-primary-10 to-transparent"
-            style={{
-              filter: 'blur(35px)',
-            }}
-            animate={{
-              x: [0, -25, 0],
-              y: [0, 15, 0],
-              scale: [1, 0.9, 1],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-          />
-          
-          {/* Small accent blob - center right */}
-          <motion.div
-            className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full opacity-15 bg-gradient-to-r from-brand-secondary-40 via-brand-secondary-10 to-transparent"
-            style={{
-              filter: 'blur(25px)',
-            }}
-            animate={{
-              x: [0, 20, 0],
-              y: [0, -15, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 18,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-          />
-        </div>
-        
-        {/* Subtle noise texture for depth */}
-        <div 
-          className="absolute inset-0 opacity-5 mix-blend-soft-light bg-glass-hero"
+        <motion.div
+          className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full opacity-10 bg-gradient-to-r from-persian_green/15 via-persian_green/5 to-transparent"
+          style={{
+            filter: 'blur(35px)',
+          }}
+          animate={{
+            x: [0, -25, 0],
+            y: [0, 15, 0],
+            scale: [1, 0.9, 1],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
         />
       </div>
 

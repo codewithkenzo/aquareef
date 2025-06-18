@@ -50,7 +50,7 @@ const MetricCard = ({ title, value, change, trend, icon: Icon, color, index }: M
       initial="hidden"
       animate="visible"
       whileHover={{ y: -4, scale: 1.02 }}
-      className="bg-snow dark:bg-jet rounded-2xl p-6 shadow-lg border border-tiffany_blue/20 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group"
+      className="bg-snow/80 dark:bg-night/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-persian_green/20 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group"
     >
       {/* Background Gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -88,7 +88,7 @@ const MetricCard = ({ title, value, change, trend, icon: Icon, color, index }: M
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.1 + 0.2, duration: 0.4 }}
-            className="text-3xl font-bold text-night dark:text-snow"
+            className="text-3xl font-bold font-monopoly text-night dark:text-snow"
           >
             {value}
           </motion.h3>
@@ -96,7 +96,7 @@ const MetricCard = ({ title, value, change, trend, icon: Icon, color, index }: M
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }}
-            className="text-jet-700 dark:text-jet-300 font-medium"
+            className="text-jet-600 dark:text-jet-300 font-medium font-mono"
           >
             {title}
           </motion.p>

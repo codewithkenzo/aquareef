@@ -37,19 +37,12 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
   )
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Glassmorphism Background System */}
-      <div className="absolute inset-0">
-        {/* Base gradient layer */}
-        <div className="absolute inset-0 bg-gradient-to-br from-snow/98 via-tiffany_blue/3 to-persian_green/8 dark:from-night/98 dark:via-jet/90 dark:to-persian_green/15" />
-        
-        {/* Floating glass orbs for depth */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-persian_green/8 to-tiffany_blue/12 rounded-full blur-3xl opacity-60" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-tiffany_blue/10 to-persian_green/6 rounded-full blur-3xl opacity-40" />
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-jet/8 to-persian_green/5 rounded-full blur-2xl opacity-30" />
-        
-        {/* Subtle noise texture */}
-        <div className="absolute inset-0 opacity-15 mix-blend-soft-light bg-glass-primary" />
+    <div className="min-h-screen relative">
+      {/* Subtle dashboard enhancement - no conflicting backgrounds */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Minimal glass orbs for depth - very subtle */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-persian_green/3 to-tiffany_blue/2 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-tiffany_blue/2 to-persian_green/3 rounded-full blur-3xl opacity-20" />
       </div>
 
       <div className="relative z-10 flex">
@@ -72,7 +65,7 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
           }}
         >
           {/* Top Header with Glass Effect */}
-          <header className="sticky top-0 z-30 border-b border-persian_green/20 shadow-sm bg-brand-light-85 backdrop-blur-xl">
+          <header className="sticky top-0 z-30 border-b border-persian_green/20 shadow-sm bg-snow/90 dark:bg-night/90 backdrop-blur-xl">
             <div className="flex items-center justify-between px-6 py-4">
               {/* Left Section */}
               <div className="flex items-center gap-4">
@@ -96,12 +89,12 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
                 {(title || subtitle) && (
                   <div>
                     {title && (
-                      <h1 className="text-2xl font-bold text-jet dark:text-snow">
+                      <h1 className="text-2xl font-bold font-monopoly text-night dark:text-snow">
                         {title}
                       </h1>
                     )}
                     {subtitle && (
-                      <p className="text-sm text-jet/70 dark:text-snow/70">
+                      <p className="text-sm font-mono text-jet-600 dark:text-jet-300">
                         {subtitle}
                       </p>
                     )}
@@ -113,11 +106,11 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
               <div className="flex items-center gap-4">
                 {/* Search */}
                 <div className="relative hidden md:block">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-jet/50 dark:text-snow/50" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-jet-500 dark:text-jet-400" />
                   <input
                     type="text"
                     placeholder="Search..."
-                    className="pl-10 pr-4 py-2 w-64 bg-snow dark:bg-jet border border-tiffany_blue/30 rounded-lg text-jet dark:text-snow placeholder-jet/50 dark:placeholder-snow/50 focus:outline-none focus:ring-2 focus:ring-persian_green focus:border-transparent transition-all duration-300"
+                    className="pl-10 pr-4 py-2 w-64 font-monopoly bg-snow dark:bg-night border border-persian_green/30 rounded-lg text-night dark:text-snow placeholder-jet-500 dark:placeholder-jet-400 focus:outline-none focus:ring-2 focus:ring-persian_green focus:border-transparent transition-all duration-300"
                   />
                 </div>
 
@@ -137,10 +130,10 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
                     <User className="w-4 h-4 text-white" />
                   </div>
                   <div className="hidden md:block text-left">
-                    <p className="text-sm font-medium text-jet dark:text-snow">
+                    <p className="text-sm font-medium font-monopoly text-night dark:text-snow">
                       John Doe
                     </p>
-                    <p className="text-xs text-jet/70 dark:text-snow/70">
+                    <p className="text-xs font-mono text-jet-600 dark:text-jet-300">
                       john@example.com
                     </p>
                   </div>

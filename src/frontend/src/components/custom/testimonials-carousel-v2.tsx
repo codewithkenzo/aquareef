@@ -75,14 +75,11 @@ export function TestimonialsCarouselV2() {
 
   return (
     <section className="py-24 relative overflow-hidden">
-      {/* Glassmorphism Background */}
-      <div className="absolute inset-0">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-snow/95 via-brand-secondary-10 to-brand-primary-10 dark:from-night/95 dark:via-jet/80 dark:to-brand-primary-20" />
-        
-        {/* Glass orbs for depth */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-brand-secondary-20 to-brand-primary-10 rounded-full blur-3xl opacity-60" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-brand-primary-15 to-brand-secondary-20 rounded-full blur-3xl opacity-40" />
+      {/* Minimal depth enhancement - no background override */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Very subtle orbs for depth */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-tiffany_blue/4 to-persian_green/3 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-persian_green/3 to-tiffany_blue/4 rounded-full blur-3xl opacity-20" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
