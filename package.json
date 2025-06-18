@@ -1,0 +1,63 @@
+{
+  "name": "gumroad-digital",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Frontend-first AI-powered digital product promotion platform",
+  "keywords": [
+    "digital-marketing",
+    "social-media",
+    "ai-powered",
+    "next.js",
+    "magic-ui",
+    "ayrshare",
+    "mcp"
+  ],
+  "author": "Digital Product Promotion Team",
+  "license": "MIT",
+  "workspaces": [
+    "src/frontend",
+    "src/core",
+    "src/cli",
+    "src/server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=src/frontend",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "type-check": "npm run type-check --workspaces",
+    "clean": "npm run clean --workspaces && rm -rf node_modules",
+    "setup": "npm install && npm run setup --workspaces",
+    "dev:frontend": "npm run dev --workspace=src/frontend",
+    "dev:server": "npm run dev --workspace=src/server",
+    "dev:cli": "npm run dev --workspace=src/cli",
+    "build:frontend": "npm run build --workspace=src/frontend",
+    "build:server": "npm run build --workspace=src/server",
+    "build:core": "npm run build --workspace=src/core",
+    "build:cli": "npm run build --workspace=src/cli",
+    "test:frontend": "npm run test --workspace=src/frontend",
+    "test:server": "npm run test --workspace=src/server",
+    "test:core": "npm run test --workspace=src/core",
+    "test:cli": "npm run test --workspace=src/cli"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "prettier": "^3.1.0",
+    "eslint": "^8.55.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/gumroad-digital.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/gumroad-digital/issues"
+  },
+  "homepage": "https://github.com/your-username/gumroad-digital#readme"
+} 

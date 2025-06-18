@@ -1,0 +1,358 @@
+# Digital Product Promotion Platform - Cursor Rules
+# Generated: 2025-01-15
+# Optimized for Frontend-First AI-powered social media promotion with Magic UI and MCP integration
+
+## 🎯 Core Principles
+
+You are working on the Digital Product Promotion Platform, a **frontend-first** solution for AI-powered digital product marketing across social media platforms. This project prioritizes beautiful, animated UI/UX using Magic UI components, then integrates with Ayrshare API and MCP Access Point for AI agent compatibility.
+
+## 🏗️ Project Structure
+
+```
+gumroad-digital/
+├── src/
+│   ├── frontend/             # Next.js 15 frontend (React + Magic UI)
+│   ├── core/                 # TypeScript core library (Ayrshare wrapper)
+│   ├── cli/                  # Node.js CLI tool
+│   ├── server/               # Fastify web server (TypeScript/Node.js)
+│   └── shared/               # Shared types and utilities
+├── .cursor/
+│   └── templates/
+│       └── components/       # UI component templates and library
+├── social-media-api/         # Cloned Ayrshare repository
+├── mcp-access-point/         # Cloned MCP Access Point repository
+├── config/                   # Configuration files
+├── tests/                    # All tests organized by component
+└── docs/                     # Documentation
+```
+
+## 🤖 Agent System
+
+This project uses specialized agents for different domains:
+
+### Frontend Development Team
+- **@agent_frontend.md** - Next.js/React specialist (App Router, TypeScript)
+- **@agent_ui.md** - UI/UX designer (using ui_designer_persona.md)
+- **@agent_components.md** - Component library manager (Magic UI + custom)
+
+### Backend Development Team
+- **@agent_core.md** - Core TypeScript library specialist (Ayrshare wrapper)
+- **@agent_server.md** - Fastify server specialist (TypeScript/Node.js)
+- **@agent_cli.md** - CLI tool specialist (Node.js/Commander.js)
+
+### Integration Team
+- **@agent_mcp.md** - MCP integration specialist
+- **@agent_social.md** - Social media platform specialist
+- **@agent_tests.md** - Testing specialist
+- **@agent_docs.md** - Documentation specialist
+
+## 📋 Operating Rules
+
+### ✅ What You Should Do
+
+1. **Respect Domain Boundaries**: Only modify files within your agent's domain
+2. **Frontend-First Development**: Build beautiful UI before backend complexity
+3. **Use Magic UI Components**: Leverage 150+ animated components from Magic UI
+4. **Generate Custom Components**: Use 21st Dev Magic MCP for custom components
+5. **Follow UI Designer Persona**: Use ui_designer_persona.md for design decisions
+6. **Maintain Type Safety**: TypeScript strict mode throughout the project
+7. **Use Zod Validation**: All API endpoints and forms must use Zod schemas
+8. **Test Everything**: Add tests for any new functionality
+9. **Document Components**: Keep component library documentation updated
+10. **Optimize Performance**: Fast loading times and smooth animations
+
+### ❌ What You Should Avoid
+
+1. **Cross-Domain Changes**: Don't modify files outside your agent's scope
+2. **Backend-First Thinking**: Don't build APIs before UI/UX is complete
+3. **Skipping Magic UI**: Don't build basic components when Magic UI exists
+4. **Ignoring Design System**: Don't create inconsistent UI patterns
+5. **Breaking Animations**: Don't remove or break existing animations
+6. **Hardcoding Styles**: Use Tailwind CSS and design tokens
+7. **Skipping Validation**: All forms and APIs must have Zod validation
+8. **Ignoring Mobile**: All components must be responsive
+
+## 🔧 Technology Stack
+
+### Frontend Technologies (Priority #1)
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS + CSS Variables
+- **Base Components**: shadcn/ui
+- **Animated Components**: Magic UI (150+ components)
+- **Animations**: Framer Motion
+- **State Management**: Zustand
+- **Forms**: React Hook Form + Zod validation
+- **Icons**: Lucide React
+
+### UI Design & Component Generation
+- **Magic UI**: Animated components from magicui.design
+- **21st Dev Magic MCP**: Custom component generation
+- **Magic UI MCP**: Component library access
+- **UI Designer Persona**: Design decision guidance
+- **Component Templates**: `.cursor/templates/components/`
+
+### Backend Technologies (Phase 1)
+- **Framework**: Fastify with TypeScript
+- **Validation**: Zod for all request/response validation
+- **OpenAPI**: @fastify/swagger for auto-generated specs
+- **Database**: Prisma ORM with SQLite/PostgreSQL
+- **Authentication**: JWT-based auth system
+- **Rate Limiting**: Built-in Fastify rate limiting
+
+### Core Library (TypeScript)
+- **Base**: Enhanced Ayrshare API wrapper
+- **Types**: Comprehensive type definitions
+- **Validation**: Zod for runtime validation
+- **Build**: TypeScript compiler + esbuild
+
+### CLI Tool (Node.js)
+- **Framework**: Commander.js for CLI interface
+- **Config**: Cosmiconfig for configuration management
+- **Output**: Rich formatting with chalk/ora
+- **Validation**: Zod for input validation
+- **Prompts**: Inquirer.js for interactive commands
+
+### MCP Integration
+- **Protocol**: MCP Access Point for HTTP-to-MCP conversion
+- **Config**: YAML configuration for service mapping
+- **Transport**: SSE and Streamable HTTP support
+- **Tools**: Auto-generated from OpenAPI specs
+
+### Social Media
+- **API**: Ayrshare for multi-platform posting
+- **Platforms**: Instagram, LinkedIn, Twitter, Facebook, TikTok, etc.
+- **Analytics**: Performance tracking and optimization
+- **Content**: AI-powered content generation
+
+## 🚀 Development Workflow
+
+1. **Identify Domain**: Determine which agent should handle the task
+2. **Frontend First**: Always prioritize UI/UX development
+3. **Use Magic UI**: Check Magic UI library before building custom components
+4. **Generate Components**: Use 21st Dev Magic MCP for custom components
+5. **Follow Design System**: Use UI Designer persona for design decisions
+6. **Validate Everything**: Use Zod for all data validation
+7. **Test Changes**: Run domain-specific tests
+8. **Update Documentation**: Keep component library and API docs updated
+
+## 📊 Quality Standards
+
+### Frontend Quality (Priority #1)
+- **Design Excellence**: Professional-grade UI/UX using Magic UI
+- **Animation Performance**: Smooth 60fps animations
+- **Responsive Design**: Mobile-first, all screen sizes
+- **Accessibility**: WCAG compliance for all components
+- **Performance**: <2s initial load, optimized bundle size
+- **Type Safety**: Full TypeScript strict mode
+
+### Component Development
+- **Magic UI Integration**: Use existing animated components
+- **Custom Components**: Generate with 21st Dev Magic MCP
+- **Design Consistency**: Follow design system tokens
+- **Documentation**: Document all components in template library
+- **Reusability**: Create composable, reusable components
+- **Testing**: Unit and visual regression tests
+
+### Code Quality
+- **Type Safety**: Full TypeScript strict mode
+- **Validation**: Zod schemas for all API boundaries and forms
+- **Error Handling**: Comprehensive error handling and logging
+- **Performance**: Optimize for speed and efficiency
+- **Security**: Secure API key handling and input validation
+- **Testing**: High test coverage with meaningful tests
+
+### API Design (Phase 1+)
+- **RESTful**: Follow REST principles for all endpoints
+- **Zod Validation**: All request/response models use Zod
+- **OpenAPI**: Complete, accurate OpenAPI specifications
+- **MCP Compatible**: Ensure MCP Access Point can convert APIs
+- **Versioned**: Use API versioning for backward compatibility
+- **Documented**: Clear endpoint documentation and examples
+
+## 🎨 UI/UX Design Principles
+
+### Magic UI Integration Strategy
+1. **Landing Pages**: Particles, grids, hero animations, testimonials
+2. **Dashboards**: Animated metrics, notifications, calendars
+3. **Forms**: Beautiful login forms, multi-step wizards
+4. **Media Management**: File explorers, media players
+5. **Analytics**: Animated charts, data visualizations
+6. **Interactions**: Ripple effects, hover animations, transitions
+
+### Component Generation Workflow
+1. **Design Research**: Use UI Designer persona for design decisions
+2. **Magic UI First**: Check if Magic UI has suitable components
+3. **Custom Generation**: Use 21st Dev Magic MCP for custom components
+4. **Customization**: Adapt components to brand and functionality
+5. **Testing**: Ensure responsiveness and accessibility
+6. **Documentation**: Document in `.cursor/templates/components/`
+
+### Design System Rules
+- **Consistent Tokens**: Use Tailwind design tokens
+- **Animation Guidelines**: Follow Magic UI animation patterns
+- **Responsive First**: Mobile-first responsive design
+- **Accessibility**: WCAG 2.1 AA compliance
+- **Performance**: Optimize animations for 60fps
+
+## 🔍 File Patterns
+
+### Frontend Application (Next.js)
+- Main: `src/frontend/app/layout.tsx`
+- Pages: `src/frontend/app/(dashboard)/`, `src/frontend/app/(marketing)/`
+- Components: `src/frontend/components/ui/`, `src/frontend/components/magic/`
+- Styles: `src/frontend/styles/globals.css`
+- Types: `src/frontend/types/`
+
+### Component Templates
+- Templates: `.cursor/templates/components/frontend/`
+- Documentation: `.cursor/templates/components/README.md`
+- Examples: `.cursor/templates/components/examples/`
+
+### Core Library (TypeScript)
+- Main: `src/core/index.ts`
+- Client: `src/core/client.ts`
+- Types: `src/core/types.ts`
+- Validation: `src/core/validation.ts`
+- Services: `src/core/services/`
+- Utils: `src/core/utils/`
+
+### CLI Tool (Node.js)
+- Main: `src/cli/index.ts`
+- Commands: `src/cli/commands/`
+- Config: `src/cli/config/`
+- Utils: `src/cli/utils/`
+
+### Web Server (Fastify)
+- Main: `src/server/app.ts`
+- Routes: `src/server/routes/`
+- Middleware: `src/server/middleware/`
+- Plugins: `src/server/plugins/`
+- Utils: `src/server/utils/`
+
+### Configuration
+- MCP: `config/mcp-config.yaml`
+- Environment: `.env.example`
+- OpenAPI: Auto-generated from Fastify
+
+## 🎯 Development Phases
+
+### Phase 0: Frontend Development (Week 1-3)
+**Priority**: Beautiful, animated UI with Magic UI components
+- Week 1: Foundation, design system, Magic UI integration
+- Week 2: Core pages, authentication, dashboard
+- Week 3: Advanced features, mobile optimization
+
+### Phase 1: Backend Integration (Week 4-5)
+**Priority**: Connect frontend to real APIs and data
+- Week 4: Fastify server, database, API endpoints
+- Week 5: Frontend-backend integration, authentication
+
+### Phase 2: Intelligence & Social Media (Week 6-7)
+**Priority**: Add AI features and social media integration
+- Week 6: Ayrshare integration, social media features
+- Week 7: AI-powered content generation and optimization
+
+### Phase 3: AI Agent Integration (Week 8)
+**Priority**: MCP compatibility for AI agents
+- MCP Access Point configuration and testing
+
+## 🎯 Success Metrics
+
+### Phase 0 (Frontend) Success Metrics
+- **Visual Excellence**: Beautiful, professional UI with Magic UI animations
+- **Performance**: <2s initial load, smooth 60fps animations
+- **Responsiveness**: Perfect mobile experience across all devices
+- **Accessibility**: WCAG 2.1 AA compliance
+- **Component Library**: 50+ documented components
+- **User Experience**: Intuitive, delightful user interactions
+
+### Overall Project Success
+- **Frontend-First Completed**: Stunning UI showcasing platform potential
+- **Backend Integration**: Seamless API connectivity
+- **AI Agent Compatibility**: MCP Access Point integration
+- **Production Ready**: Deployed and monitoring
+- **Performance**: Fast, responsive, accessible
+- **Design Quality**: Professional-grade UI/UX
+
+## 🔐 Security & Best Practices
+
+### Frontend Security
+- **Input Validation**: Zod validation for all forms
+- **XSS Prevention**: Proper sanitization and escaping
+- **CSRF Protection**: Implement CSRF tokens
+- **Content Security Policy**: Strict CSP headers
+- **Secure Dependencies**: Regular security audits
+
+### API Security
+- **Authentication**: JWT-based authentication
+- **Authorization**: Role-based access control
+- **Input Validation**: Zod validation for all inputs
+- **Rate Limiting**: Implement rate limiting for all endpoints
+- **CORS**: Proper CORS configuration
+
+### Secret Management
+- **Environment Variables**: All secrets in environment variables
+- **No Hardcoding**: Never hardcode API keys or secrets
+- **Secure Storage**: Use secure storage for production secrets
+- **Rotation**: Support for API key rotation
+
+## 🚨 Error Handling
+
+### Frontend Error Handling
+- **User-Friendly Messages**: Clear, actionable error messages
+- **Error Boundaries**: React error boundaries for graceful failures
+- **Loading States**: Proper loading and error states
+- **Form Validation**: Real-time validation with helpful feedback
+- **Network Errors**: Graceful handling of network failures
+
+### API Errors
+- **Structured Errors**: Use consistent error response format
+- **HTTP Status Codes**: Proper HTTP status codes
+- **Error Messages**: Clear, actionable error messages
+- **Logging**: Comprehensive error logging
+
+## 🔗 Agent Coordination
+
+When working across domains:
+1. **Frontend Priority**: Frontend agents have priority in Phase 0
+2. **Design Consistency**: All agents must follow design system
+3. **Component Reuse**: Use existing Magic UI components before building custom
+4. **Documentation**: Keep component library documentation current
+5. **Testing**: Ensure all components are tested and accessible
+
+---
+
+**Remember**: We're building a **frontend-first** platform with stunning UI/UX using Magic UI components. Focus on creating beautiful, animated interfaces that showcase the platform's potential before adding backend complexity!
+
+## 🎨 Magic UI Component Priorities
+
+### Landing Page Components
+- **Hero Animations**: Particles, grids, animated backgrounds
+- **Feature Showcases**: Animated cards, reveals, transitions
+- **Testimonials**: Carousel, animated testimonials
+- **Call-to-Actions**: Animated buttons, hover effects
+
+### Dashboard Components
+- **Metrics**: Animated counters, progress bars, status indicators
+- **Notifications**: Real-time notification system
+- **Navigation**: Animated sidebars, breadcrumbs
+- **Charts**: Interactive, animated data visualizations
+
+### Form Components
+- **Login/Register**: Beautiful authentication forms
+- **Multi-step Wizards**: Campaign creation, onboarding
+- **Input Components**: Enhanced form inputs with validation
+- **File Uploads**: Drag-and-drop media uploads
+
+### Media Components
+- **File Explorers**: Media library management
+- **Media Players**: Video/audio preview components
+- **Image Galleries**: Responsive image galleries
+- **Content Previews**: Social media post previews
+
+---
+
+**Last Updated**: 2025-01-15
+**Project**: Digital Product Promotion Platform (Frontend-First)
+**Version**: 2.0.0 
