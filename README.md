@@ -221,28 +221,28 @@ aquareef/
 
 ## 🎯 Roadmap
 
-### 🚀 **v0.5 - Ocean Foundation** (Q1 2024)
+### 🚀 **v0.5 - Ocean Foundation** (Q3 2025)
 - [x] Complete frontend with Magic UI
 - [x] Dashboard and user interface
 - [x] Responsive design system
 - [ ] Backend API development
 - [ ] User authentication
 
-### 🌊 **v1.0 - Reef Ecosystem** (Q2 2024)
+### 🌊 **v1.0 - Reef Ecosystem** (Q4 2025)
 - [ ] Full social media integration
 - [ ] AI content generation
 - [ ] Advanced scheduling system
 - [ ] Analytics dashboard
 - [ ] Multi-user support
 
-### 🐠 **v1.5 - Coral Growth** (Q3 2024)
+### 🐠 **v1.5 - Coral Growth** (Q1 2026)
 - [ ] AI agent compatibility
 - [ ] Advanced automation workflows
 - [ ] Team collaboration features
 - [ ] White-label solutions
 - [ ] API marketplace
 
-### 🦈 **v2.0 - Deep Sea** (Q4 2024)
+### 🦈 **v2.0 - Deep Sea** (Q2 2026)
 - [ ] Enterprise features
 - [ ] Advanced AI models
 - [ ] Custom integrations
